@@ -22,7 +22,7 @@ var guessedElement=document.getElementById("guessed");
 
 function keyPressEvent(event) {
     var userGuess = event.key;
-    var computerChoice=choiceArray[Math.floor(Math.random()* choiceArray.length)];
+    var computerChoice = choiceArray[Math.floor(Math.random()* choiceArray.length)];
 
     //update text content of elements for the guess/choice with textContent
 
@@ -30,7 +30,8 @@ userGuessElement.textContent=userGuess;
 compChoiceElement.textContent=computerChoice;
 guessedElement.textContent=userGuess;
 winsScoreElement.textContent=wins;
-lossesScoreElement.textContent=losses;
+lossesScoreElement.textContent=loss;
+guessesRemainingElement.textContent=guesses;
 
 //create a for loop to declare what to do with each result
 
@@ -40,8 +41,6 @@ wins++;
 else if (userGuess !== computerChoice)
 losses++ ;
 guesses-- ;
-guessedElement = [];
-
 }
 
 //link it to key event
