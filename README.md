@@ -6,12 +6,12 @@ It will combine html, css, and javascript.
 
 First, I will psuedocode the game to figure out what I need to do, including the steps and variable.
 
-Second, I will write the html for what information is needed on the page, including game instructions, and the score. 
+Second, I will write the html for what information is needed on the page, including game instructions, and the score.  
 
-Third, I will make it 'meh-pretty' using css. 
+Third, I will create the javascript to make it functional. maybe. hopefully. 
 
-Fourth, I will create the javascript to make it functional. maybe. hopefully. 
+Fourth, once it works, I will go back and make it prettier using css. 
 
-Fifth, once it works, I will go back and make it prettier using css. 
+Sixth, link to my portfolio site
 
-Sixth, #nailedit, will move on and try to create the word guess game. 
+Seventh,  #nailedit, will move on and try to create the word guess game. 

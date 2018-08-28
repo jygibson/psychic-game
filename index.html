@@ -6,14 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>ZOLTAR!!</title>
-
-<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/stylesheet.css">
+    <script type= "text/javascript" src="assets/javascript/game.js"></script>
   </head>
 
 <body>
+
+  <div id="title-instructions">
+  <h1>Guess what letter Zoltar is thinking of!</h1>
+  <h2>You get 9 guesses to get it right...</h2>
+  </div>
+
+<div id="you-guessed">
+  <p>You Guessed: <span id="user-guess"></span></p>
+</div>
+
+<div id="zoltar-thoughts">
+  <p>I was thinking of:<span id="zoltar-choice"></span></p>
+</div>
+
+  <div id="wins-field">
+  <p>Wins <span id="winScore"></span></p>
+  </div>
+
+  <div id="losses-field">
+  <p>Losses<span id="lossScore"></span></p>
+  </div>
+
+<div id="guesses-info">  
+<p>Guesses remaining:<span id="guessRemain"></span><br></p>
+<p>What you've guessed so far:<span id="guessed"></span></p>
+</div>
     
-//we will need the instructions on the page:
+<!--we will need the instructions on the page:
 Guess what letter I'm thinking of!
 wins
 losses
@@ -25,10 +49,10 @@ it will need to apply math for computer to pick a random letter from an array ma
 it will need to compare the two results (if/else statements)
 
 user gets 9 guesses
-if the user guesses the same letter as the computer generates, it will increase the score by 1
+if the user guesses the same letter as the computer generates, it will increase the wins score by 1
 if the user guesses the wrong letter, it will decrease the guesses left column by 1 ( i--) 
 all keystrokes are recorded next to guesses so far
-after 9 guesses, the losses counter will increase by 1. The game will reset.
+after 9 guesses, the losses counter will increase by 1. The game will reset (chosen letters back to none)!-->
 
 
 
