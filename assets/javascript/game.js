@@ -6,7 +6,7 @@ var wins=0;
 var loss=0;
 var guesses=9;
 
-//declare the choices for the game (user and computer) with an array
+//declare the choices for the game (computer) with an array
 
 var choiceArray=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 
@@ -28,6 +28,9 @@ function keyPressEvent(event) {
 
 userGuessElement.textContent=userGuess;
 compChoiceElement.textContent=computerChoice;
+guessedElement.textContent=userGuess;
+winsScoreElement.textContent=wins;
+lossesScoreElement.textContent=losses;
 
 //create a for loop to declare what to do with each result
 
@@ -38,9 +41,6 @@ else if (userGuess !== computerChoice)
 losses++ ;
 guesses-- ;
 guessedElement = [];
-
-else if (guesses < 1)
-alert("you lose");
 
 }
 
