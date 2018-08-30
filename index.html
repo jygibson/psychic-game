@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Metamorphous|Uncial+Antiqua" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <title>ZOLTAR!!</title>
@@ -25,30 +25,35 @@
   </div>
   </div>
 
+<div id="row"> 
 <div class= "d-flex justify-content-center align-items-center">
-  <div id="col-8">
 <div id="you-guessed">
-  <p>You Guessed: <span id="user-guess"></span></p>
+  <p>You Guessed:<br> <span id="user-guess"></span></p>
 </div>
 </div>
 </div>
+
 
 <div class= "row">
-  <div id="col-4">
+  <div class="col">
   <div id="wins-field">
-  <p>Wins: <span id="winScore"></span></p>
+  <p>Wins:<br> <span id="winScore"></span></p>
   </div>
-<div id="col-4">
+<div class="col">
   <div id="losses-field">
-  <p>Losses:<span id="lossScore"></span></p>
+  <p>Losses: <br><span id="lossScore"></span></p>
   </div>
   </div>
   </div>
 
-<div id="row">
+<div class="row">
+<div class="col">
 <div id="guesses-info">  
-<p>Guesses remaining:<span id="guessRemain"></span><br></p>
-<p>What you've guessed so far:<span id="guessed"></span></p>
+<p>Guesses remaining:<br><span id="guessRemain"></span><br></p></div>
+</div>
+<div class="col">
+<div id="letters-guessed">
+<p>What you've guessed so far:<br><span id="guessed"></span></p></div>
 </div>
 </div>
     

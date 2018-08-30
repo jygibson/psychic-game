@@ -38,6 +38,7 @@ guessesRemainingElement.textContent=" " +guesses;
 if (userGuess === computerChoice){
 wins++;
 guessChoices=[];
+guesses=9;
 alert("Zoltar Speaks: You guessed it - your wish is granted!");
 }
 
@@ -50,6 +51,7 @@ if (guesses === 0){
     guesses=9;
     loss++;
     guessChoices=[];
+    alert("Zoltar Speaks:Your wish is not granted. Try again.");
 }
 }
 //link it to key event
