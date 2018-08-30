@@ -26,11 +26,11 @@ function keyPressEvent(event) {
 
     //update text content of elements for the guess/choice with textContent
 
-userGuessElement.textContent=userGuess;
-guessedElement.textContent=guessChoices;
-winsScoreElement.textContent=wins;
-lossesScoreElement.textContent=loss;
-guessesRemainingElement.textContent=guesses;
+userGuessElement.textContent=" " + userGuess;
+guessedElement.textContent=" " + guessChoices;
+winsScoreElement.textContent=" " +wins;
+lossesScoreElement.textContent=" " +loss;
+guessesRemainingElement.textContent=" " +guesses;
 
 //create a conditional to declare what to do with each result
 

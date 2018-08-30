@@ -1,3 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
-    background-image: url(../assets/images/zoltar.png);
+    background-image: url(../images/zoltar.png);
+    background-size: cover;
+}
+
+.jumbotron {
+    background-color: gold;
+    color: darkred;
+}
+
+h1 {
+    font-family: 'Uncial Antiqua', cursive;
+}
+
+p {
+    font-family: 'Metamorphous', cursive;
+}
+
+#you-guessed {
+    width: 200px;
+    height: 150px;
+    border: 5px darkred solid;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    clear:both;
+    background-color: lightgoldenrodyellow;
+    color: red;
+}
+
+#wins-field {
+    width: 200px;
+    height: 150px;
+    border: 5px darkred solid;
+    margin: 30px;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    float: left;
+    clear: left;
+    background-color: lightgoldenrodyellow;
+    color: red;
+}
+
+#losses-field {
+    width: 200px;
+    height: 150px;
+    border: 5px darkred solid;
+    margin: 30px;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    float: left;
+    clear:right;
+    background-color: lightgoldenrodyellow;
+    color: red;
 }
