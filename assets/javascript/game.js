@@ -10,6 +10,7 @@ var guessChoices=[];
 //declare the choices for the game (computer) with an array
 
 var choiceArray=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+var computerChoice = choiceArray[Math.floor(Math.random()* choiceArray.length)];
 
 //we need to reference the elements in html for wins, losses, guesses remaining, and probably letters already guessed
 var userGuessElement=document.getElementById("user-guess");
@@ -25,8 +26,7 @@ guessesRemainingElement.textContent=" " +guesses;
 //next, create a function that will handle the key press events
 
 function keyPressEvent(event) {
-    var userGuess = event.key;
-    var computerChoice = choiceArray[Math.floor(Math.random()* choiceArray.length)];
+var userGuess = event.key;
 
 //update text content of elements for the guess/choice with textContent
 
