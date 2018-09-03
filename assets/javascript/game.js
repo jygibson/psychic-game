@@ -18,13 +18,17 @@ var lossesScoreElement=document.getElementById("lossScore");
 var guessesRemainingElement=document.getElementById("guessRemain");
 var guessedElement=document.getElementById("guessed");
 
+winsScoreElement.textContent=" " +wins;
+lossesScoreElement.textContent=" " +loss;
+guessesRemainingElement.textContent=" " +guesses;
+
 //next, create a function that will handle the key press events
 
 function keyPressEvent(event) {
     var userGuess = event.key;
     var computerChoice = choiceArray[Math.floor(Math.random()* choiceArray.length)];
 
-    //update text content of elements for the guess/choice with textContent
+//update text content of elements for the guess/choice with textContent
 
 userGuessElement.textContent=" " + userGuess;
 guessedElement.textContent=" " + guessChoices;
@@ -32,8 +36,13 @@ winsScoreElement.textContent=" " +wins;
 lossesScoreElement.textContent=" " +loss;
 guessesRemainingElement.textContent=" " +guesses;
 
+
 //create a conditional to declare what to do with each result
 
+if (choiceArray.indexOf(userGuess) < 0){
+           return false;
+           alert("Please choose a key between a - z");
+       }
 
 if (userGuess === computerChoice){
 wins++;
@@ -44,6 +53,7 @@ alert("Zoltar Speaks: You guessed it - your wish is granted!");
 
 else if (userGuess != computerChoice){
 guesses-- ;
+console.log(guesses);
 guessChoices.push(userGuess);
 }
 
@@ -56,5 +66,5 @@ if (guesses === 0){
 }
 //link it to key event
 
-document.onkeyup = keyPressEvent;
+document.onkeydown = keyPressEvent;
 
