@@ -39,8 +39,7 @@ guessesRemainingElement.textContent=" " +guesses;
 
 //create a conditional to declare what to do with each result
 
-if (choiceArray.indexOf(userGuess) < 0){
-           return false;
+if (choiceArray.indexOf(userGuess)=== -1){
            alert("Please choose a key between a - z");
        }
 
@@ -57,7 +56,7 @@ console.log(guesses);
 guessChoices.push(userGuess);
 }
 
-if (guesses === 0){
+if (guesses === -1){
     guesses=9;
     loss++;
     guessChoices=[];
