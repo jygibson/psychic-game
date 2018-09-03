@@ -11,6 +11,7 @@ var guessChoices=[];
 
 var choiceArray=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 var computerChoice = choiceArray[Math.floor(Math.random()* choiceArray.length)];
+console.log(computerChoice);
 
 //we need to reference the elements in html for wins, losses, guesses remaining, and probably letters already guessed
 var userGuessElement=document.getElementById("user-guess");
@@ -27,15 +28,6 @@ guessesRemainingElement.textContent=" " +guesses;
 
 function keyPressEvent(event) {
 var userGuess = event.key;
-
-//update text content of elements for the guess/choice with textContent
-
-userGuessElement.textContent=" " + userGuess;
-guessedElement.textContent=" " + guessChoices;
-winsScoreElement.textContent=" " +wins;
-lossesScoreElement.textContent=" " +loss;
-guessesRemainingElement.textContent=" " +guesses;
-
 
 //create a conditional to declare what to do with each result
 
@@ -56,13 +48,22 @@ console.log(guesses);
 guessChoices.push(userGuess);
 }
 
-if (guesses === -1){
+if (guesses === 0){
     guesses=9;
     loss++;
     guessChoices=[];
     alert("Zoltar Speaks:Your wish is not granted. Try again.");
 }
+
+//update text content of elements for the guess/choice with textContent
+
+userGuessElement.textContent=" " + userGuess;
+guessedElement.textContent=" " + guessChoices;
+winsScoreElement.textContent=" " +wins;
+lossesScoreElement.textContent=" " +loss;
+guessesRemainingElement.textContent=" " +guesses;
 }
+
 //link it to key event
 
 document.onkeydown = keyPressEvent;
