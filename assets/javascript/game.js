@@ -24,6 +24,14 @@ winsScoreElement.textContent=" " +wins;
 lossesScoreElement.textContent=" " +loss;
 guessesRemainingElement.textContent=" " +guesses;
 
+//reset game function
+function resetGame() {
+    computerChoice = choiceArray[Math.floor(Math.random() * choiceArray.length)];
+    console.log(computerChoice);
+    guessChoices = [];
+    lives = 9;
+    }
+
 //next, create a function that will handle the key press events
 
 function keyPressEvent(event) {
@@ -40,6 +48,7 @@ wins++;
 guessChoices=[];
 guesses=9;
 alert("Zoltar Speaks: You guessed it - your wish is granted!");
+resetGame();
 }
 
 else if (userGuess != computerChoice){
@@ -53,6 +62,7 @@ if (guesses === 0){
     loss++;
     guessChoices=[];
     alert("Zoltar Speaks:Your wish is not granted. Try again.");
+    resetGame();
 }
 
 //update text content of elements for the guess/choice with textContent
